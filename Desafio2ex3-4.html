@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Curso de Javacript - Exercício 3 e 4</title>
+    </head>
+
+    <body>
+        <input type="text" name="nome" id="teste">
+        <button onClick="adicionar()">Adicionar</button>
+    </body>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var lista = document.createElement("ul");
+        document.body.appendChild(lista);
+        var quantnome = nomes.length;
+            for (var i =0;  i < quantnome; i++) {
+                var  item = document.createElement("li");
+                item.textContent = nomes[i];
+                lista.appendChild(item);
+            }
+//  Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+//  nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+// demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+
+        function adicionar() {
+        var novonome = document.querySelector('input#teste').value;
+        var  item = document.createElement("li");
+        item.textContent = novonome;
+        lista.appendChild(item);
+        document.querySelector('input#teste').value = '';
+        }
+    </script>
+</html>

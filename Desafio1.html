@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Curso de javascript</title>
+</head>
+
+<body>
+    <script>
+       // Exercício 1
+       console.log("Exercício 1");
+        function infouser() {
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };
+            return endereco;
+        }
+
+        var x = infouser();
+        console.log("O usuário mora em", x.cidade, "/", x.uf, "no bairro", x.bairro, "na", x.rua, "com número", x.numero);
+
+
+        // Exercício 2
+        console.log("\n Exercício 2");
+        function pares(x, y) {
+            x = (x % 2 == 0) ? x : x++;
+            if (x <= y) {
+                while (x < y) {
+                    console.log(x);
+                   x = x + 2;
+                }
+            };
+        }
+        pares(1, 10);
+
+        // Exercício 3
+        console.log("\n Exercício 3");
+        function temHabilidade(skills) {
+            return skills.indexOf("Javascript");
+        }
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        var a = temHabilidade(skills); // true ou false
+        a = (a !== -1) ? true : false;
+        console.log(a);
+
+        //Exercício 4
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+        console.log("\n Exercício 4");
+        function experiencia(anosEstudo) {
+                if (anosEstudo < 1) {
+                    return "Iniciante"
+                } else if (anosEstudo <= 3) {
+                    return "Intermediário"
+                } else if (anosEstudo <= 6) {
+                    return "Avançado"
+                } else {
+                    return "Jedi Master"
+                }
+            }
+        var anosEstudo = 7;
+        console.log(experiencia(anosEstudo));
+
+        // Exercício 5
+        console.log("\n Exercício 5");
+        var usuarios = [
+            {
+                 nome: "Diego",
+                 habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                 nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+            ];
+        function gethabilidade(){
+            for (u of usuarios) {
+                 console.log(u.nome, "Possui as habilidades:", u.habilidades.join());
+            }
+        }
+        gethabilidade();
+        //O Diego possui as habilidades: Javascript, ReactJS, Redux
+        //O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+
+
+    </script>
+
+
+</body>
+
+</html>
