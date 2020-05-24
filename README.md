@@ -1,6 +1,6 @@
 # Exercícios JS Starter 
 
-Exercícios introdutórios feitos no curso starter da rockeaset, utilizando apenas HTML e JS.
+Exercícios introdutórios feitos no curso starter da rockeaseat, utilizando apenas HTML e JS.
 
 ## Como Iniciar 
 
